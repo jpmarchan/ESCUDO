@@ -279,7 +279,7 @@
   border-top: 0.2rem solid #000000;
   width: 6rem;
 }
-.bd-line-title-white1 {
+.odrops-header-special{
   border-top: 0.2rem solid #FFFFFF;
   width: 6rem;
 }
@@ -388,7 +388,7 @@
     border-left-color: #000000;
   }
   .codrops-header-special {
-    width: 28rem;
+    width: 40rem;
   }
 }
 
