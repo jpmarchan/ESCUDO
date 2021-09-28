@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta property="og:url" content="https://convoca.pe/historiasdelbicentenario/" />
+  <meta property="og:type" content="ESCUDO" />
+  <meta property="og:description" content="Pódcasts en lenguas originarias para combatir la desinformació..." />
+  <meta property="og:image" content="https://convoca.pe/historiasdelbicentenario/portada.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ESCUDO" />
+  <meta name="twitter:site" content="@convocape" />
+  <meta name="twitter:description" content="Pódcasts en lenguas originarias para combatir la desinformació.." />
+  <meta name="twitter:creator" content="@convocape" />
+  <meta name="twitter:image" content="https://convoca.pe/historiasdelbicentenario/portada.png" />
+
+
+  <title>Historias del Bicentenario</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logos/favicon.png" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="assets/css/ri-grid.css" />
+  <script type="text/javascript" src="assets/js/modernizr.custom.26633.js"></script>
+</head>
+
+<body>
+  <div id="overlay" class="d-none d-lg-block" onclick="offOverlay()"></div>
+  <!-- Header section -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand center-logo" href="https://convoca.pe/">
+      <img src="assets/img/logos/convoca-web-6-anios.png" class="img-fluid" width="110" height="50" alt="Convoca logo"
+        loading="lazy" />
+    </a>
+    <div class="w-100 mb-2 d-block d-lg-none">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="mr-2">
+            COMPARTE
+          </span>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="javascript:shareIndexOnFacebook()" style="text-decoration: none;">
+              <div class="rounded-icon dark mr-2">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+            </a>
+
+            <a href="javascript:shareIndexOnTwitter()" style="text-decoration: none;">
+              <div class="rounded-icon dark mr-2">
+                <i class="fab fa-twitter"></i>
+              </div>
+            </a>
+
+            <a href="javascript:shareIndexOnWhatsapp()" style="text-decoration: none;">
+              <div style="font-size: 2rem; color: #000000;">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <label class="switch">
+            <input type="checkbox" id="chkEspecialAudioSM" checked onclick="playEspecialAudio('chkEspecialAudioSM')" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <ul class="navbar-nav mr-auto u-bootstrap-navbar-center">
+      <li class="nav-item d-none" id="hidden_item">
+        <a class="nav-link nav-border-top-light-gray h6" href="#" target="_blank">El <br
+            class="d-block d-lg-none">proyecto <span class="mr-2"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-border-top-blue h6" href="pages/peru/peru.html">
+          <br class="d-block d-lg-none"> PERÚ<span class="mr-2"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-border-top-red h6" href="pages/ecuador/ecuador.html">
+          <br class="d-block d-lg-none">ECUADOR<span class="mr-2"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-border-top-gray h6" href="pages/bolivia/bolivia.html">
+          <br class="d-block d-lg-none">BOLIVIA<span class="mr-2"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-border-top-cuarto h6" href="pages/mexico/mexico.html">
+          <br class="d-block d-lg-none">MÉXICO<span class="mr-2"></span></a>
+      </li>
+    </ul>
+
+    <div class="d-none d-lg-block">
+      <div class="d-flex flex-column align-items-end">
+        <label class="switch" title="Reproducir podcast">
+          <input type="checkbox" id="chkEspecialAudioLG" checked onclick="playEspecialAudio('chkEspecialAudioLG')" />
+          <span class="slider round"></span>
+        </label>
+
+        <div class="d-flex align-items-center justify-content-center">
+          <span class="mr-2">
+            COMPARTE
+          </span>
+          <div class="d-flex align-items-center justify-content-center">
+            <a href="javascript:shareIndexOnFacebook()" style="text-decoration: none;">
+              <div class="rounded-icon dark mr-2">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+            </a>
+
+            <a href="javascript:shareIndexOnTwitter()" style="text-decoration: none;">
+              <div class="rounded-icon dark mr-2">
+                <i class="fab fa-twitter"></i>
+              </div>
+            </a>
+
+            <a href="javascript:shareIndexOnWhatsapp()" style="text-decoration: none;">
+              <div style="font-size: 2rem; color: #000000;">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- End: Header section -->
+
+  <div id="gridImagesSection">
+    <div id="preloader" class="div-pic-full"></div>
+
+    <section>
+      <div id="ri-grid" class="ri-grid ri-grid-size-3">
+        <ul id="list_grid_images" class="d-none">
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/ashaninkas%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/ecuador/ecuador.html')"><img
+                src="assets/img/home/webp/ECUADOR1%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/mexico/mexico.html')"><img
+                src="assets/img/home/webp/08%20CHIAPA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/PRINCIPAL%20vacunacion%20aymara.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/bolivia/bolivia.html')"><img
+                src="assets/img/home/webp/4%20BOLIVIA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/vacunación%20uros%20puno%20aymara%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/mexico/mexico.html')"><img
+                src="assets/img/home/webp/01%20CHIAPA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/vacunación%20quechua1%20PRINCIPAL.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/bolivia/bolivia.html')"><img
+                src="assets/img/home/webp/6%20bolivia%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/mexico/mexico.html')"><img
+                src="assets/img/home/webp/11%20CHIAPA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/PRINCIPAL%20vacunación%20indígena2.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/bolivia/bolivia.html')"><img
+                src="assets/img/home/webp/5%20bolivia%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/PRINCIPAL%20ashaninkas2.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/bolivia/bolivia.html')"><img
+                src="assets/img/home/webp/2%20BOLIVIA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/mexico/mexico.html')"><img
+                src="assets/img/home/webp/12%20CHIAPA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/ecuador/ecuador.html')"><img
+                src="assets/img/home/webp/ECUADOR2%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/peru/peru.html')"><img
+                src="assets/img/home/webp/PRINCIPAL%20vacunación%20indígena3.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/mexico/mexico.html')"><img
+                src="assets/img/home/webp/07%20CHIAPA%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/ecuador/ecuador.html')"><img
+                src="assets/img/home/webp/ECUADOR1%20principal.jpg" /></a>
+          </li>
+          <li>
+            <a onclick="redirectToPage('pages/bolivia/bolivia.html')"><img
+                src="assets/img/home/webp/5%20bolivia%20principal.jpg" /></a>
+          </li>
+        </ul>
+      </div>
+
+      <header class="codrops-header-special">
+        <div class="bd-line-title-white"></div>
+
+        <div >
+          <h1 style="font-size: 2.5rem; font-weight: bold;">
+            <div class="row">
+              <div class="col-lg-4">
+                <img style="width: 125px" src="assets/img/Sin%20título-1.png">
+              </div>
+
+              <div style="" class="col-lg-8">
+                ESCUDO <h4>Pódcasts en lenguas originarias para combatir la desinformación sobre la vacunación<br /> contra el COVID-19 en los pueblos indígenas de América.</h4>
+              </div>
+            </div>
+          </h1>
+        </div>
+      </header>
+    </section>
+  </div>
+
+  <!-- Hero section -->
+  <div class="bg-black pt-4 pb-4" >
+
+    <div class="container" >
+      <!-- <h4>
+        Voces, percepciones y memoria del Perú a 200 años de su independencia
+      </h4> -->
+      <p style="    margin-top: 50px;">
+      <div class="bd-line-title-white1"></div>
+      Poseedores de una milenaria diversidad cultural, los pueblos indígenas u originarios representan el 6,2 % de la población mundial, según la Organización de las Naciones Unidas. Son más de 476 millones personas que pertenecen a estas comunidades que no solo cuentan con su propia lengua nativa sino también con tradiciones ancestrales y una relación única con la naturaleza.
+      </p>
+      <p>
+        <!-- En
+        <a href="https://convoca.pe/" target="_blank" class="link-on-hero">Convoca.pe</a>
+        presentamos testimonios de peruanos y peruanas que, desde sus diversas experiencias
+         y contextos, han emprendido caminos de resistencia e independencia. 
+        Sus voces son un reflejo y muestra de un país que ofrece oportunidades para algunos y carencias para otros.  -->
+        En América Latina y el Caribe los pueblos originarios constituyen más del 8,5% de la población, mientras que México y Bolivia concentran la mayor cantidad de personas en estas comunidades. A las brechas sociales existentes, se sumó la pandemia del COVID-19 que no solo ha incrementado estas desigualdades en cuanto a acceso a información confiable sino también a los servicios de salud, muchas veces inexistentes en estos lugares. 
+      </p>
+      <p>
+        <!-- Te invitamos a escucharlos, reconocerlos y compartir sus historias.
+        Si conoces a un resistente o un  independiente, puedes contactarte al
+        <a class="text-success link-style cursor-pointer-on" onclick="shareWSConvoca('')">WhatsApp 980486800</a>. -->
+        La desconfianza y la desinformación sobre esta enfermedad originó que miles de personas pertenecientes a estos pueblos se nieguen a inmunizarse contra el COVID-19 debido al temor generado por noticias falsas sin asidero científico que circulan en estas comunidades.
+      </p>
+      <p>
+         <h4>
+      Ante este desafío nace “Escudo”, una iniciativa que cuenta con el apoyo de Google News Initiative y es liderada por Convoca.pe y la red de verificadores LatamChequea que impulsa Chequeado de Argentina
+        </h4>
+        con la participación de medios independientes reconocidos y expertos en la técnica del fact checking como Bolivia Verifica (Bolivia), Ecuador Chequea (Ecuador), Animal Político (México) y OjoPúblico (Perú), que a través de podcasts en lenguas originarias brindan información clara, precisa y veraz sobre la vacunación contra el COVID-19 a las comunidades indígenas u originarias.
+      </p>
+      <p>
+        Cada uno de estos informes que son difundidos en más de 40 radios comunitarias de América cuenta no solo con una reportería previa sino también con la voz de reconocidos expertos y representantes de las comunidades indígenas a fin de combatir la desinformación del proceso de vacunación contra el COVID-19 en los pueblos originarios, mediante el idioma nativo de estas comunidades.
+      </p>
+      <p>
+        Los invitamos a escuchar y compartir los podcasts de “Escudo”, una serie de informes que buscan aclarar las dudas de los pobladores de las comunidades indígenas respecto a la vacunación contra el COVID-19.
+      </p>
+    </div>
+  </div>
+  <!-- End: Hero section -->
+
+  <!-- Message section -->
+  <div id="message_section">
+    <div class="bd-card bd-card-primary">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2">
+          <div class="bd-line-title-primary"></div>
+          <h4 class="font-size-2"><a href="pages/peru/peru.html" class="link-style">PERÚ</a>
+          </h4>
+        </div>
+        <div class="col-lg-4">
+          <p class="font-size-1">
+            Serie de pódcasts en quechua, aymara y asháninka elaborados por Convoca.pe y Ojo Público.
+          </p>
+          <a href="pages/peru/peru.html" class="link-style">
+            <div class="d-flex align-items-center">
+              <span class="mr-1">Ver más</span>
+              <i class="fas fa-chevron-right" style="font-size: 1.5rem;"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bd-card bd-card-secondary">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2">
+          <div class="bd-line-title-secondary"></div>
+          <h4 class="font-size-2"><a href="pages/ecuador/ecuador.html" class="link-style">ECUADOR</a></h4>
+        </div>
+        <div class="col-lg-4">
+          <p class="font-size-1">
+            Serie de pódcasts en kichwa elaborados por Ecuador Chequea
+          </p>
+          <a href="pages/ecuador/ecuador.html" class="link-style">
+            <div class="d-flex align-items-center">
+              <span class="mr-1">Ver más</span>
+              <i class="fas fa-chevron-right" style="font-size: 1.5rem;"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bd-card bd-card-gray">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2">
+          <div class="bd-line-title-gray"></div>
+          <h4 class="font-size-2"><a href="pages/bolivia/bolivia.html" class="link-style">BOLIVIA</a></h4>
+        </div>
+        <div class="col-lg-4">
+          <p class="font-size-1">
+            Serie de pódcasts en quechua, aymara y guaraní elaborados por Bolivia Verifica.
+          </p>
+          <a href="pages/ecuador/ecuador.html" class="link-style">
+            <div class="d-flex align-items-center">
+              <span class="mr-1">Ver más</span>
+              <i class="fas fa-chevron-right" style="font-size: 1.5rem;"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="bd-card bd-card-cuarto">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2">
+          <div class="bd-line-title-cuarto"></div>
+          <h4 class="font-size-2"><a href="pages/ecuador/ecuador.html" class="link-style">MÉXICO</a></h4>
+        </div>
+        <div class="col-lg-4">
+          <p class="font-size-1">
+            Serie de pódcasts en mixteco y tsotsil elaborados por Animal Político
+          </p>
+          <a href="pages/ecuador/ecuador.html" class="link-style">
+            <div class="d-flex align-items-center">
+              <span class="mr-1">Ver más</span>
+              <i class="fas fa-chevron-right" style="font-size: 1.5rem;"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+  <!-- End: Message section -->
+
+  <!-- Credits section -->
+  <div class="bg-black">
+    <div class="container pt-4 pb-2">
+      <p class="text-center text-white">
+        <strong>Coordinación general:</strong>
+        <span style="font-weight: lighter;">Milagros Salazar Herrera y Carolina Caycho Huaman.</span>
+        <strong>Edición de audios:</strong>
+        <span style="font-weight: lighter;">Sonia Tello.</span>
+        <strong>Edición de textos:</strong>
+        <span style="font-weight: lighter;">Carolina Caycho Huaman.</span>
+        <strong>Coordinadores por país:</strong>
+        <span style="font-weight: lighter;">Olivia Sohr - Chequeado (Argentina) / Carolina Caycho Huaman - Convoca (Perú) / David Hidalgo y Gianella Tapullima - OjoPúblico (Perú) / Adriana Olivera - Bolivia Verifica (Bolivia) / Andrea Ramírez - Ecuador Chequea (Ecuador) / Samedi Aguirre - Animal Político (México).
+        </span>
+        <strong>Reporteros:</strong>
+        <span style="font-weight: lighter;">Fiorella Montano y Yessenia Coronel - Convoca (Perú) / Gianella Tapullima - OjoPúblico (Perú) / Marcelo Blanco - Bolivia Verifica (Bolivia) / Alliwa Pazmiño - Ecuador Chequea (Ecuador) / Siboney Flores y Arturo Daen - Animal Político (México).
+        </span>
+        <strong>Desarrollo web:</strong>
+        <span style="font-weight: lighter;">Yenner Marchán Zamora.</span>
+        <strong>Diseño:</strong>
+        <span style="font-weight: lighter;">Iván Palomino.</span>
+      </p>
+    </div>
+  </div>
+  <!-- End: Credits section -->
+
+  <!-- Footer section -->
+  <footer class="bg-black">
+    <div class="container-fluid pt-4 pb-3 text-white">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 mb-3 text-center-sm">
+          <img class="img-fluid" width="130px" height="60px" src="assets/img/logos/convoca-web-6-anios_footer.png" alt="Logo Convoca" />
+        </div>
+        <div class="col-md-4 col-sm-12 text-center">
+          <span class="mr-5">Miembro de:</span>
+          <img src="assets/img/logos/gobal.png" alt="Global logo" class="img-fluid" />
+        </div>
+        <div class="col-md-4 col-sm-12 text-right">
+          <div class="d-flex align-items-center justify-content-md-end justify-content-center mt-sm-4">
+            <span class="navbar-text mr-2">
+              Síguenos
+            </span>
+            <a href="https://web.facebook.com/convoca/" style="text-decoration: none;">
+              <div class="rounded-icon white mr-2">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+            </a>
+
+            <a href="https://twitter.com/convocape" style="text-decoration: none;">
+              <div class="rounded-icon white mr-2">
+                <i class="fab fa-twitter"></i>
+              </div>
+            </a>
+
+            <a href="#" style="text-decoration: none;">
+              <div style="font-size: 2rem; color: #ffffff;" class="mr-2">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End: Footer section -->
+
+  <!-- Button to talk to CONVOCA.PE by Whatsapp -->
+  <div class="menu pmd-floating-action" role="navigation">
+    <button type="button" id="btnFloatWS" onclick="shareWSConvoca('')"
+      class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-success shadow"
+      data-toggle="tooltip" data-placement="left" data-html="true"
+      title="<span class='font-size-1'>Cuéntanos tu historia</span>">
+      <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+        <i class="fab fa-whatsapp" style="font-size: 2rem;"></i>
+      </div>
+    </button>
+  </div>
+  <!-- End: Button to talk to CONVOCA.PE by Whatsapp -->
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88=" crossorigin="anonymous"></script>
+  <script src="assets/js/share.js"></script>
+  <script src="assets/js/jquery.gridrotator.js"></script>
+  <script type="text/javascript" src="assets/js/load-grid.js"></script>
+  <script type="text/javascript" src="assets/js/playmusic.js"></script>
+  <script>
+    $(window).on("load", function () {
+      $("#preloader").removeClass("div-pic-full");
+      $("#list_grid_images").removeClass("d-none");
+    });
+  </script>
+  <script type="text/javascript" src="assets/js/ganalytics.js"></script>
+</body>
+
+</html>
